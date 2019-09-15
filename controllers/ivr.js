@@ -7,7 +7,7 @@ module.exports.welcome = function (req, res) {
 	
 	twiml.play({
 		loop: 1
-	}, 'https://bittersweet-discus-4165.twil.io/assets/blah.mp3')
+	}, 'https://bittersweet-discus-4165.twil.io/assets/Mick%20IVR%20Greeting.m4a')
 
 	let keywords = []
 
