@@ -5,10 +5,10 @@ const taskrouterHelper = require('./helpers/taskrouter-helper.js')
 module.exports.welcome = function (req, res) {
 	const twiml =  new twilio.twiml.VoiceResponse()
 	
-	twiml.play({
+/*	twiml.play({
 		loop: 1
 	}, 'https://www.dropbox.com/s/kv9hz1p61pu8ew8/ivrgreet.mp3?dl=0')
-
+*/
 	let keywords = []
 
 	/* add the team names as hints to the automatic speech recognition  */
