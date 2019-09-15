@@ -24,7 +24,7 @@ module.exports.welcome = function (req, res) {
 
 	gather.say(req.configuration.ivr.text)
 
-	twiml.say('You did not say anything or enter any digits.')
+	twiml.say({voice: 'Polly.Brian'}, 'You did not say anything or enter any digits.')
 	twiml.pause({length: 2})
 	twiml.redirect({method: 'GET'}, 'welcome')
 
