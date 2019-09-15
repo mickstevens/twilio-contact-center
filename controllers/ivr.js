@@ -71,7 +71,7 @@ module.exports.selectTeam = function (req, res) {
 	/* the caller pressed a key that does not match any team */
 	if (team === null) {
 		// redirect the call to the previous twiml
-		twiml.say('Your selection was not valid, please try again')
+		twiml.say({voice: 'Polly.Brian'}, 'Your selection was not valid, please try again')
 		twiml.pause({length: 2})
 		twiml.redirect({ method: 'GET' }, 'welcome')
 	} else {
@@ -83,7 +83,7 @@ module.exports.selectTeam = function (req, res) {
 			timeout: 5
 		})
 
-		gather.say('Press a key if you want a callback from ' + team.friendlyName + ', or stay on the line')
+		gather.say({voice: 'Polly.Brian'}, 'Press a key if you want a callback from ' + team.friendlyName + ', or stay on the line')
 
 		/* create task attributes */
 		const attributes = {
@@ -121,10 +121,10 @@ module.exports.createTask = function (req, res) {
 
 	taskrouterHelper.createTask(req.configuration.twilio.workflowSid, attributes)
 		.then(task => {
-			twiml.say('Thanks for your callback request, an agent will call you back soon.')
+			twiml.say({voice: 'Polly.Brian'}, 'Thanks for your callback request, an agent will call you back soon.')
 			twiml.hangup()
 		}).catch(error => {
-			twiml.say('An application error occured, the demo ends now')
+			twiml.say({voice: 'Polly.Brian'}, 'An application error occured, the demo ends now')
 		}).then(() => {
 			res.send(twiml.toString())
 		})
