@@ -1,5 +1,6 @@
 {
 	"ivr": {
+		"voice": "Polly.Emma", 
 		"text": "Thanks for calling. You can press a key or say the department name. Press 1 for Sales, press 2 for Support",
 		"options": [
 			{
