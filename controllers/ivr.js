@@ -3,7 +3,7 @@ const twilio 	= require('twilio')
 const taskrouterHelper = require('./helpers/taskrouter-helper.js')
 
 module.exports.welcome = function (req, res) {
-	const twiml =  new twilio.twiml.VoiceResponse()
+	const twiml =  new twilio.twiml.VoiceResponse({voice: 'Polly.Joanna'})
 
 	let keywords = []
 
