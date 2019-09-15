@@ -1,6 +1,5 @@
 {
 	"ivr": {
-		"play": "https://bittersweet-discus-4165.twil.io/assets/blah.mp3",
 		"voice": "Polly.Brian",
 		"text": "Thanks for calling. You can press a key or say the department name. Press 1 for Sales, press 2 for Support",
 		"options": [
